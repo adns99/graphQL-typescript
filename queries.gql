@@ -1,0 +1,43 @@
+query cachos {
+    returnSingleCategory(id: "6216d3d442d6fe302e9fd7ed"){
+      description
+      id
+    }
+  }
+  
+  mutation crearCategoria {
+    createCategory(data: {
+      name: "Electronics",
+      description: "Electronics hardware"
+    }){
+      name
+      description
+      id
+    }
+  }
+  
+  query retornaTodasLasCategorias{
+    returnAllCategories{
+      id
+      name
+      description
+    }
+  }
+  
+  mutation agregarProducto{
+    createProduct(data: {
+      name: "SmartWatch"
+      description: "Just a new smart watch"
+      color: "blue"
+      stock: 100
+      price: 300
+      category_id: "6216da7742d6fe302e9fd7f7"
+    }){
+      name
+      description
+      color
+      stock
+      price
+      category_id
+    }
+  }
